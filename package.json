@@ -16,7 +16,8 @@
     "marked": "^0.3.3",
     "multiline": "^1.0.2",
     "ractive": "^0.7.3",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {},
   "engines": {
@@ -28,7 +29,10 @@
     ]
   },
   "scripts": {
-    "build": "gulp sass js"
+    "build": "gulp sass js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
